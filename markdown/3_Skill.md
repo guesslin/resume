@@ -1,11 +1,10 @@
-Skill
+SKILL
 =====
 
 * Programming Language
 * Linux System Management
 * Arduino
 * Security
-
 
 Programming Language
 --------------------
@@ -14,7 +13,7 @@ Programming Language
 * Python
 * C/C++
 
-System manangement
+Linux System manangement
 ------------------
 
 * GNU/Linux(Gentoo, Debian, Ubuntu)
@@ -30,5 +29,6 @@ Arduino
 Security
 --------
 
-* Over The Wire: [Bandit](https://github.com/guesslin/overthewire_bandit)
-* Linux [IR_tools](https://github.com/guesslin/IR_Tool)
+* Incident Response
+* Malware Analysis
+* Static Analysis tool develop
