@@ -4,10 +4,10 @@ PROJECTS
 Golang
 ------
 
-* [mits][]:Mutual Information Term Segmentation
-* [mh4gquest][]:Monster Hunter 4G Quest random list generator
-* [chartit][]:Generate Chart from CSV file
-* [have_fun][hf1] [2][hf2]:Find fun between us in google map
+* [mits][] : Mutual Information Term Segmentation
+* [mh4gquest][] : Monster Hunter 4G Quest random list generator
+* [chartit][] : Generate Chart from CSV file
+* [have_fun][hf1] [2][hf2] : Find fun between us in google map
 
 [mits]: https://github.com/guesslin/mits/
 [mh4gquest]: https://github.com/guesslin/mh4gquest/
@@ -25,7 +25,7 @@ Python
 C/C++
 -----
 
-* [Formosa-BBS][]:Formosa BBS system
+* [Formosa-BBS][] : Formosa BBS system
 
 [Formosa-BBS]: https://github.com/guesslin/formosa
 
