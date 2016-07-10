@@ -51,7 +51,7 @@ div div, section section /* Nested sections */
 
 p {}
 blockquote
-    { 
+    {
     font-style: italic;
     }
 
@@ -88,11 +88,11 @@ sub /* Subscripts. Pandoc: H~2~O */
 sup /* Superscripts. Pandoc: The 2^nd^ try. */
     {
     }
-    
+
 em /* Emphasis. Markdown: *emphasis* or _emphasis_ */
     {
     }
-    
+
 em > em /* Emphasis within emphasis: *This is all *emphasized* except that* */
     {
     font-style: normal;
@@ -125,11 +125,11 @@ a /* All links */
         color: black;
         background: transparent;
         }
-        
+
     a[href^="http://"]:after, a[href^="https://"]:after
         {
         /* However, links that go somewhere else, might be useful to the reader,
-           so for http and https links, print the URL after what was the link 
+           so for http and https links, print the URL after what was the link
            text in parens
         */
         content: " (" attr(href) ") ";
@@ -141,9 +141,9 @@ a /* All links */
 
 img
     {
-    /* Let it be inline left/right where it wants to be, but verticality make 
-       it in the middle to look nicer, but opinions differ, and if in a multi-line 
-       paragraph, it might not be so great. 
+    /* Let it be inline left/right where it wants to be, but verticality make
+       it in the middle to look nicer, but opinions differ, and if in a multi-line
+       paragraph, it might not be so great.
     */
     vertical-align: middle;
     }
@@ -163,7 +163,7 @@ p.caption /* Pandoc figure-style caption within div.figure */
 
 /* ---- Code blocks and spans ---- */
 
-pre, code 
+pre, code
     {
     background-color: #fdf7ee;
     /* BEGIN word wrap */
@@ -210,7 +210,7 @@ p > code, li > code /* Code spans in paragraphs and tight lists */
     padding-left:  2px;
     padding-right: 2px;
     }
-    
+
 li > p code /* Code span in a loose list */
     {
     /* We have room for some more background color above and below */
@@ -222,22 +222,22 @@ span.math /* Pandoc inline math default and --jsmath inline math */
     {
     /* Tried font-style:italic here, and it messed up MathJax rendering in some browsers. Maybe don't mess with at all. */
     }
-    
+
 div.math /* Pandoc --jsmath display math */
     {
     }
-    
+
 span.LaTeX /* Pandoc --latexmathml math */
     {
-    } 
+    }
 
 eq /* Pandoc --gladtex math */
     {
-    } 
+    }
 
 /* ---- Tables ---- */
 
-/*  A clean textbook-like style with horizontal lines above and below and under 
+/*  A clean textbook-like style with horizontal lines above and below and under
     the header. Rows highlight on hover to help scanning the table on screen.
 */
 
@@ -253,7 +253,7 @@ table
     margin-left: auto;
     margin-right: auto;
     }
-    
+
 thead /* Entire table header */
     {
     border-bottom: 1pt solid #000;
@@ -262,7 +262,7 @@ thead /* Entire table header */
 
 tr.header /* Each header row */
     {
-    } 
+    }
 
 tbody /* Entire table  body */
     {
@@ -276,13 +276,13 @@ tr.odd:hover, tr.even:hover /* Use .odd and .even classes to avoid styling rows 
     {
     background-color: #eee;
     }
-    
+
 /* Odd and even rows */
 tr.odd {}
 tr.even {}
 
 td, th /* Table cells and table header cells */
-    { 
+    {
     vertical-align: top; /* Word */
     vertical-align: baseline; /* Others */
     padding-left:   0.5em;
@@ -290,14 +290,14 @@ td, th /* Table cells and table header cells */
     padding-top:    0.2em;
     padding-bottom: 0.2em;
     }
-    
+
 /* Removes padding on left and right of table for a tight look. Good if thead has no background color*/
 /*
 tr td:last-child, tr th:last-child
     {
     padding-right: 0;
     }
-tr td:first-child, tr th:first-child 
+tr td:first-child, tr th:first-child
     {
     padding-left: 0;
     }
@@ -306,7 +306,7 @@ tr td:first-child, tr th:first-child
 
 th /* Table header cells */
     {
-    font-weight: bold; 
+    font-weight: bold;
     }
 
 tfoot /* Table footer (what appears here if caption is on top?) */
@@ -343,7 +343,7 @@ dd+dt /* 2nd or greater term in the list */
     border-top: 1pt solid black;
     padding-top: 0.5em;
     }
-    
+
 dd /* A definition */
     {
     margin-bottom: 0.5em;
@@ -353,11 +353,11 @@ dd+dd /* 2nd or greater definition of a term */
     {
     border-top: 1px solid black; /* To separate multiple definitions */
     }
-    
+
 /* ---- Footnotes ---- */
 
 a.footnote, a.footnoteRef { /* Pandoc, MultiMarkdown footnote links */
-    font-size: small; 
+    font-size: small;
     vertical-align: text-top;
 }
 
@@ -377,14 +377,14 @@ a[href^="#fnref"], a.reversefootnote /* Pandoc, MultiMarkdown, ?? footnote back 
 div.footnotes /* Pandoc footnotes div at end of the document */
     {
     }
-    
+
 div.footnotes li[id^="fn"] /* A footnote item within that div */
     {
     }
 
-/* You can class stuff as "noprint" to not print. 
-   Useful since you can't set this media conditional inside an HTML element's 
-   style attribute (I think), and you don't want to make another stylesheet that 
+/* You can class stuff as "noprint" to not print.
+   Useful since you can't set this media conditional inside an HTML element's
+   style attribute (I think), and you don't want to make another stylesheet that
    imports this one and adds a class just to do this.
 */
 
