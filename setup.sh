@@ -9,7 +9,7 @@ srcs=`ls -1 $mkd_dir`
 for item in $srcs; do
 	echo "Cat $item into temporary file"
 	cat ./$mkd_dir/$item >> $tmpfile
-	echo -e "\n" >> $tmpfile
+	echo -e "\n\n" >> $tmpfile
 done
 
 generateHTML
