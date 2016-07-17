@@ -1,542 +1,465 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <style type="text/css">
-  div#header, header
-      {
-      /* Put border on bottom. Separates it from TOC or body that comes after it. */
-      border-bottom: 1px solid #aaa;
-      margin-bottom: 0.5em;
-      }
-  
-  .title /* Pandoc title header (h1.title) */
-      {
-      text-align: center;
-      }
-  
-  .author, .date /* Pandoc author(s) and date headers (h2.author and h3.date) */
-      {
-      text-align: center;
-      }
-  div#TOC, nav#TOC
-      {
-      /* Put border on bottom to separate it from body. */
-      border-bottom: 1px solid #aaa;
-      margin-bottom: 0.5em;
-      }
-  
-  @media print
-      {
-      div#TOC, nav#TOC
-          {
-          /* Don't display TOC in print */
-          display: none;
-          }
-      }
-  
-  /* ---- Headers and sections ---- */
-  
-  h1, h2, h3, h4, h5, h6
-  {
-      font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Calibri, Arial, sans-serif; /* Sans-serif headers */
-  
-      /* font-family: "Liberation Serif", "Georgia", "Times New Roman", serif; /* Serif headers */
-  
-      page-break-after: avoid; /* Firefox, Chrome, and Safari do not support the property value "avoid" */
-  }
-  
-  /* Pandoc with --section-divs option */
-  
-  div div, section section /* Nested sections */
-      {
-      margin-left: 2em; /* This will increasingly indent nested header sections */
-      }
-  
-  p {}
-  blockquote
-      { 
-      font-style: italic;
-      }
-  
-  li /* All list items */
-      {
-      }
-  
-  li > p /* Loosely spaced list item */
-      {
-      margin-top: 1em; /* IE: lack of space above a <li> when the item is inside a <p> */
-      }
-  
-  ul /* Whole unordered list */
-      {
-      }
-  
-  ul li /* Unordered list item */
-      {
-      }
-  
-  ol /* Whole ordered list */
-      {
-      }
-  
-  ol li /* Ordered list item */
-      {
-      }
-  
-  hr {}
-  sub /* Subscripts. Pandoc: H~2~O */
-      {
-      }
-  
-  sup /* Superscripts. Pandoc: The 2^nd^ try. */
-      {
-      }
-      
-  em /* Emphasis. Markdown: *emphasis* or _emphasis_ */
-      {
-      }
-      
-  em > em /* Emphasis within emphasis: *This is all *emphasized* except that* */
-      {
-      font-style: normal;
-      }
-  
-  strong /* Markdown **strong** or __strong__ */
-      {
-      }
-  
-  /* ---- Links (anchors) ---- */
-  
-  a /* All links */
-      {
-      /* Keep links clean. On screen, they are colored; in print, they do nothing anyway. */
-      text-decoration: none;
-      }
-  
-  @media screen
-      {
-      a:hover
-          {
-          /* On hover, we indicate a bit more that it is a link. */
-          text-decoration: underline;
-          }
-      }
-  @media print
-      {
-      a   {
-          /* In print, a colored link is useless, so un-style it. */
-          color: black;
-          background: transparent;
-          }
-          
-      a[href^="http://"]:after, a[href^="https://"]:after
-          {
-          /* However, links that go somewhere else, might be useful to the reader,
-             so for http and https links, print the URL after what was the link 
-             text in parens
-          */
-          content: " (" attr(href) ") ";
-          font-size: 90%;
-          }
-      }
-  
-  /* ---- Images ---- */
-  
-  img
-      {
-      /* Let it be inline left/right where it wants to be, but verticality make 
-         it in the middle to look nicer, but opinions differ, and if in a multi-line 
-         paragraph, it might not be so great. 
-      */
-      vertical-align: middle;
-      }
-  div.figure /* Pandoc figure-style image */
-      {
-      /* Center the image and caption */
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      font-style: italic;
-      }
-  
-  p.caption /* Pandoc figure-style caption within div.figure */
-      {
-      /* Inherits div.figure props by default */
-      }
-  
-  /* ---- Code blocks and spans ---- */
-  
-  pre, code 
-      {
-      background-color: #fdf7ee;
-      /* BEGIN word wrap */
-      /* Need all the following to word wrap instead of scroll box */
-      /* This will override the overflow:auto if present */
-      white-space: pre-wrap; /* css-3 */
-      white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-      white-space: -pre-wrap; /* Opera 4-6 */
-      white-space: -o-pre-wrap; /* Opera 7 */
-      word-wrap: break-word; /* Internet Explorer 5.5+ */
-      /* END word wrap */
-      }
-  
-  pre /* Code blocks */
-      {
-      /* Distinguish pre blocks from other text by more than the font with a background tint. */
-      padding: 0.5em; /* Since we have a background color */
-      border-radius: 5px; /* Softens it */
-      /* Give it a some definition */
-      border: 1px solid #aaa;
-      /* Set it off left and right, seems to look a bit nicer when we have a background */
-      margin-left:  0.5em;
-      margin-right: 0.5em;
-      }
-  @media screen
-      {
-      pre
-          {
-          /* On screen, use an auto scroll box for long lines, unless word-wrap is enabled */
-          white-space: pre;
-          overflow: auto;
-          /* Dotted looks better on screen and solid seems to print better. */
-          border: 1px dotted #777;
-          }
-      }
-  
-  code /* All inline code spans */
-      {
-      }
-  
-  p > code, li > code /* Code spans in paragraphs and tight lists */
-      {
-      /* Pad a little from adjacent text */
-      padding-left:  2px;
-      padding-right: 2px;
-      }
-      
-  li > p code /* Code span in a loose list */
-      {
-      /* We have room for some more background color above and below */
-      padding: 2px;
-      }
-  
-  /* ---- Math ---- */
-  span.math /* Pandoc inline math default and --jsmath inline math */
-      {
-      /* Tried font-style:italic here, and it messed up MathJax rendering in some browsers. Maybe don't mess with at all. */
-      }
-      
-  div.math /* Pandoc --jsmath display math */
-      {
-      }
-      
-  span.LaTeX /* Pandoc --latexmathml math */
-      {
-      } 
-  
-  eq /* Pandoc --gladtex math */
-      {
-      } 
-  
-  /* ---- Tables ---- */
-  
-  /*  A clean textbook-like style with horizontal lines above and below and under 
-      the header. Rows highlight on hover to help scanning the table on screen.
-  */
-  
-  table
-      {
-      border-collapse: collapse;
-      border-spacing: 0; /* IE 6 */
-  
-      border-bottom: 2pt solid #000;
-      border-top: 2pt solid #000; /* The caption on top will not have a bottom-border */
-  
-      /* Center */
-      margin-left: auto;
-      margin-right: auto;
-      }
-      
-  thead /* Entire table header */
-      {
-      border-bottom: 1pt solid #000;
-      background-color: #eee; /* Does this BG print well? */
-      }
-  
-  tr.header /* Each header row */
-      {
-      } 
-  
-  tbody /* Entire table  body */
-      {
-      }
-  
-  /* Table body rows */
-  
-  tr  {
-      }
-  tr.odd:hover, tr.even:hover /* Use .odd and .even classes to avoid styling rows in other tables */
-      {
-      background-color: #eee;
-      }
-      
-  /* Odd and even rows */
-  tr.odd {}
-  tr.even {}
-  
-  td, th /* Table cells and table header cells */
-      { 
-      vertical-align: top; /* Word */
-      vertical-align: baseline; /* Others */
-      padding-left:   0.5em;
-      padding-right:  0.5em;
-      padding-top:    0.2em;
-      padding-bottom: 0.2em;
-      }
-      
-  /* Removes padding on left and right of table for a tight look. Good if thead has no background color*/
-  /*
-  tr td:last-child, tr th:last-child
-      {
-      padding-right: 0;
-      }
-  tr td:first-child, tr th:first-child 
-      {
-      padding-left: 0;
-      }
-  */
-  
-  
-  th /* Table header cells */
-      {
-      font-weight: bold; 
-      }
-  
-  tfoot /* Table footer (what appears here if caption is on top?) */
-      {
-      }
-  
-  caption /* This is for a table caption tag, not the p.caption Pandoc uses in a div.figure */
-      {
-      caption-side: top;
-      border: none;
-      font-size: 0.9em;
-      font-style: italic;
-      text-align: center;
-      margin-bottom: 0.3em; /* Good for when on top */
-      padding-bottom: 0.2em;
-      }
-  
-  /* ---- Definition lists ---- */
-  
-  dl /* The whole list */
-      {
-      border-top: 2pt solid black;
-      padding-top: 0.5em;
-      border-bottom: 2pt solid black;
-      }
-  
-  dt /* Definition term */
-      {
-      font-weight: bold;
-      }
-  
-  dd+dt /* 2nd or greater term in the list */
-      {
-      border-top: 1pt solid black;
-      padding-top: 0.5em;
-      }
-      
-  dd /* A definition */
-      {
-      margin-bottom: 0.5em;
-      }
-  
-  dd+dd /* 2nd or greater definition of a term */
-      {
-      border-top: 1px solid black; /* To separate multiple definitions */
-      }
-      
-  /* ---- Footnotes ---- */
-  
-  a.footnote, a.footnoteRef { /* Pandoc, MultiMarkdown footnote links */
-      font-size: small; 
-      vertical-align: text-top;
-  }
-  
-  a[href^="#fnref"], a.reversefootnote /* Pandoc, MultiMarkdown, ?? footnote back links */
-      {
-      }
-  
-  @media print
-      {
-      a[href^="#fnref"], a.reversefootnote /* Pandoc, MultiMarkdown */
-          {
-          /* Don't display these at all in print since the arrow is only something to click on */
-          display: none;
-          }
-      }
-  
-  div.footnotes /* Pandoc footnotes div at end of the document */
-      {
-      }
-      
-  div.footnotes li[id^="fn"] /* A footnote item within that div */
-      {
-      }
-  
-  /* You can class stuff as "noprint" to not print. 
-     Useful since you can't set this media conditional inside an HTML element's 
-     style attribute (I think), and you don't want to make another stylesheet that 
-     imports this one and adds a class just to do this.
-  */
-  
-  @media print
-      {
-      .noprint
-          {
-          display:none;
-          }
-      }
-  </style>
-</head>
-<body>
-<h1 id="guesslinlin-yu-han">Guesslin(Lin, Yu-han)</h1>
-<ul>
-<li>Programmer of Golang, Python, and C/C++</li>
-<li>Interested in writing some stuff to change my life</li>
-<li>Player of Monster Hunter: mhp2g, mhp3, mh4, mh4g, mhx</li>
-<li>Player of Mini Quad-Copter</li>
-</ul>
-<h2 id="summary">Summary</h2>
-<p>Work at <a href="https://www.icst.org.tw/">ICST</a>, specialized in system development and programming, usually using Python and GO, and has experience in developing automatic logging system and assist tools. Participate in Golang Taipei Community.</p>
-<p>服務於行政院資通安全科技服務中心，專長為系統開發與程式設計，最常使用的程式語言為 Python 以及 Golang ，擁有開發自動化紀錄系統與工具之經驗。參與Golang Taipei社群活動。</p>
-<h1 id="work-experience">WORK EXPERIENCE</h1>
-<h2 id="institute-for-information-industry">Institute for Information Industry</h2>
-<ul>
-<li><strong>Engineer</strong> since October 2013 to current.
-<ul>
-<li>introduce revision control flow into development flow</li>
-<li>develop automatic logging parsing and record system</li>
-<li>assist tools development and mantain
-<ul>
-<li></li>
-</ul></li>
-<li>malware analysis
-<ul>
-<li>write and deploy snort rule base on malware networking signature</li>
-<li>write and deploy YARA rule base on malware static pattern</li>
-</ul></li>
-<li><p>incident response</p></li>
-<li>導入版本控制流程於組內系統</li>
-<li>自動化紀錄系統開發</li>
-<li>工具開發
-<ul>
-<li>配合分析流程</li>
-</ul></li>
-<li>惡意程式分析
-<ul>
-<li>根據網路連線特徵撰寫 SNORT RULE</li>
-<li>根據惡意程式字串特徵撰寫 YARA RULE</li>
-</ul></li>
-<li>資安事故處理
-<ul>
-<li>於技服中心服務期間，擁有資安事故處理的經驗，事故處理中使用的技能包含： 現場採證 系統日誌檔分析 網路封包分析 惡意程式分析 資安事故報告撰寫</li>
-</ul></li>
-</ul></li>
-</ul>
-<h1 id="skill">SKILL</h1>
-<h2 id="programming-language">Programming Language</h2>
-<ul>
-<li>Golang</li>
-<li>Python</li>
-<li>C</li>
-<li>C++</li>
-<li>SQL (mostly in MySQL and Postgres)</li>
-<li>Shell script (automation)</li>
-</ul>
-<h2 id="linux-system-manangement">Linux System manangement</h2>
-<ul>
-<li>GNU/Linux(Gentoo, Debian, Ubuntu, Centos)</li>
-<li>DNS Server</li>
-<li>Docker Server management</li>
-<li>Mail Server</li>
-</ul>
-<h2 id="security">Security</h2>
-<ul>
-<li>Incident Response</li>
-<li>Malware Analysis</li>
-<li>Static Analysis tool develop</li>
-<li>Network Flow Analysis</li>
-<li>Reverse Engineering</li>
-<li>System Log analysis</li>
-</ul>
-<h2 id="network-management">Network Management</h2>
-<ul>
-<li>L3 Switch/Router, OSPF</li>
-<li>Firewall, iptable</li>
-</ul>
-<h2 id="arduino">Arduino</h2>
-<ul>
-<li>ArduPilot(ArduCopter, ArduPlane)</li>
-</ul>
-<h1 id="projects">PROJECTS</h1>
-<h2 id="golang">Golang</h2>
-<ul>
-<li><a href="https://github.com/guesslin/mits">mits</a> : Mutual Information Term Segmentation</li>
-<li><a href="https://github.com/guesslin/mh4gquest">mh4gquest</a> : Monster Hunter 4G Quest random list generator</li>
-<li><a href="https://github.com/guesslin/chartit">chartit</a> : Generate Chart from CSV file</li>
-<li><a href="https://github.com/guesslin/have_fun">have_fun</a> <a href="http://refreshing-well-815.appspot.com/">2</a> : Find fun between us in google map</li>
-<li><a href="https://github.com/guesslin/bf">BF interpreter</a> : bf language interpreter implement in golang</li>
-</ul>
-<h2 id="python">Python</h2>
-<ul>
-<li><a href="https://github.com/guesslin/wra">Taiwan reservoir storage auto-crawler</a> : Auto Crawler for Taiwan reservoir storage capacity</li>
-<li>[Mock note][mock_note] : Python Mocking module notes</li>
-<li><a href="https://github.com/guesslin/petools">PE Tools</a> : My own writing tools for PE files analysis</li>
-<li><a href="https://github.com/guesslin/cec">CEC Data set check</a> : Central election commission dataset checker</li>
-<li><a href="https://github.com/MISNUK/CECDataSet">CEC DataSet</a> : Central election commission dataset from 1994 to 2016</li>
-</ul>
-<h2 id="cc">C/C++</h2>
-<ul>
-<li><a href="https://github.com/guesslin/formosa">Formosa-BBS</a> : Formosa BBS system</li>
-</ul>
-<h2 id="security-1">Security</h2>
-<ul>
-<li>Over The Wire: <a href="https://github.com/guesslin/overthewire_bandit">Bandit</a></li>
-<li>Linux <a href="https://github.com/guesslin/IR_Tool">IR_tools</a></li>
-</ul>
-<h2 id="write-ups">Write-Ups</h2>
-<ul>
-<li><a href="https://github.com/guesslin/leetcode">leetcode</a></li>
-</ul>
-<h2 id="other">Other</h2>
-<ul>
-<li><a href="https://github.com/guesslin/talks">Talks</a> : My talks slides</li>
-<li><a href="https://github.com/guesslin/package-tips">Package-tips</a> : Tips for writing GO package, and how to write test code in GO</li>
-</ul>
-<h1 id="education">EDUCATION</h1>
-<ol style="list-style-type: decimal">
-<li>Master degree of information management, department of information management, 2013, National University of Kaohsiung, Kaohsiung. (08/2011 ~ 07/2013)</li>
-<li>Bachelor of engineering, department of computer science and engineering, 2011, National Sun Yat-sen University, Kaohsiung. (08/2005 ~ 07/2011)</li>
-</ol>
-<h1 id="autobiography">AUTOBIOGRAPHY</h1>
-<h1 id="contact">CONTACT</h1>
-<ul>
-<li><strong>E-mail</strong>: <script type="text/javascript">
-<!--
-h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x67;&#x75;&#x65;&#x73;&#x73;&#108;&#x69;&#110;&#x31;&#x39;&#56;&#54;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
-// -->
-</script><noscript>&#x67;&#x75;&#x65;&#x73;&#x73;&#108;&#x69;&#110;&#x31;&#x39;&#56;&#54;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript></li>
-<li><strong>Github</strong>: <a href="https://github.com/guesslin" class="uri">https://github.com/guesslin</a></li>
-<li><strong>Homepage</strong>: <a href="https://guesslin.github.io" class="uri">https://guesslin.github.io</a></li>
-<li>Linkedin: <a href="https://www.linkedin.com/in/yu-han-lin-2a87a49a" class="uri">https://www.linkedin.com/in/yu-han-lin-2a87a49a</a></li>
-</ul>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="generator" content="pandoc" />
+
+        
+        
+                <title>Lin, Yu-han's Resume</title>
+        <style type="text/css">code{white-space: pre;}</style>
+
+        
+        
+        
+        
+                    <style type="text/css">
+            @font-face {
+              font-family: 'FontAwesome';
+              src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0');
+              src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+              font-weight: normal;
+              font-style: normal;
+            }
+            
+            
+            
+            
+            /* Printing styles */
+            
+            @media print {
+            
+            	h2:last-of-type,  h2:nth-of-type(5),h2:nth-of-type(6) {
+            		page-break-before: always;
+            	}
+            
+            	dt, dd, hr {
+            		page-break-inside: avoid;
+            	}
+            
+            }
+            
+            
+            /* General */
+            
+            
+            body {
+            	margin-bottom: 20%;
+            	margin-left: 20%;
+            	width: 60%;
+            	margin: 0 auto;
+            	background-color: #fff;
+            	font-family: Georgia;
+            	font-size: 15px;
+            	color: #444;
+            	position: relative;
+            }
+            
+            code {
+            	font-size: 13px;
+            }
+            
+            h1 {
+            	font-size: 38px;
+            	text-transform: uppercase;
+            }
+            
+            h2 {
+            	font: "Open Sans", sans-serif;
+            	font-size: 1.3em;
+            	text-transform: uppercase;
+            	border-bottom: 3px solid #11ABB0;
+            	padding-bottom: 4px;
+            	margin-top: -10px;
+            }
+            
+            h3 {
+            	font: "Open Sans", sans-serif;
+            	font-size: 1.3em;
+            	border-bottom: 1px solid #FFFFDF;
+            	padding-bottom: 4px;
+            }
+            
+            hr {
+              background: #ddd;
+              clear: both;
+              float: none;
+              width: 100%;
+              height: 1px;
+              margin: 0 0 2.0em;
+              border: none;
+            }
+            
+            hr:nth-of-type(1) {
+            	margin-top: -10px;
+            }
+            
+            a, a:visited {
+            	text-decoration: none;
+            }
+            
+            a:hover {
+            	text-decoration: underline;
+            }
+            
+            .caption {
+            	display: none;
+            }
+            
+            ul {
+            	padding-left: 25px;
+            }
+            
+            p {
+            	margin: 13px 0;
+            }
+            
+            
+            
+            /* Header list with personal info */
+            
+            h2:nth-of-type(1) {
+            	margin-top: -10px;
+            	font-style: italic;
+            	border: none;
+            	margin-bottom: 0;
+            	padding-bottom: 0;
+            }
+            
+            h2:nth-of-type(2) {
+            	margin-top: -20px;
+            }
+            
+            .figure:nth-of-type(1) img {
+            	position: absolute;
+            	top: 25px;
+            	right: 5px;
+            	border: 5px solid #C7A0A4;
+            	border-radius: 100%;
+            }
+            
+            
+            body > ul:nth-of-type(1) li {
+            	list-style: none;
+            	padding-bottom: 5px;
+            }
+            
+            body > ul:nth-of-type(1) li:before {
+              display: inline-block;
+              font: normal normal normal 14px/1 FontAwesome;
+              font-size: inherit;
+              text-rendering: auto;
+              margin-right: 20px;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              transform: translate(0, 0);
+            }
+            
+            /* GitHub */
+            body > ul:nth-of-type(1) li:nth-of-type(1):before {
+              content: "\f09b";
+            }
+            
+            /* Mail */
+            body > ul:nth-of-type(1) li:nth-of-type(2):before {
+              content: "\f0e0";
+            }
+            
+            /* Birthday */
+            body > ul:nth-of-type(1) li:nth-of-type(3):before {
+              content: "\f1fd";
+            }
+            
+            /* Address */
+            body > ul:nth-of-type(1) li:nth-of-type(4):before {
+              content: "\f015";
+            }
+            
+            /* Phone */
+            body > ul:nth-of-type(1) li:nth-of-type(5):before {
+              content: "\f095";
+            }
+            
+            
+            
+            
+            
+            /* Education timeline */
+            
+            dl:nth-of-type(1),
+            dl:nth-of-type(2),
+            dl:nth-of-type(3),
+            dl:nth-of-type(4)
+            {
+            	position: relative;
+            }
+            
+            dl:nth-of-type(1) dt,
+            dl:nth-of-type(2) dt,
+            dl:nth-of-type(3) dt,
+            dl:nth-of-type(4) dt
+            {
+            	background: none repeat scroll 0 0 #ed5565;
+            	box-shadow: 0 0 0 0 #11abb0 inset;
+            	color: #fff;
+            	display: inline-block;
+            	font-size: 14px;
+            	font-weight: bold;
+            	margin-left: 55px;
+            	padding: 8px 15px;
+            }
+            
+            dl:nth-of-type(1) dt:before,
+            dl:nth-of-type(2) dt:before,
+            dl:nth-of-type(3) dt:before,
+            dl:nth-of-type(4) dt:before
+            {
+            	display: inline-block;
+            	font: normal normal normal 14px/1 FontAwesome;
+            	font-size: inherit;
+            	text-rendering: auto;
+            	-webkit-font-smoothing: antialiased;
+            	-moz-osx-font-smoothing: grayscale;
+            	transform: translate(0, 0);
+            	content: "\f19c";
+            	position: absolute;
+            	left: 25px;
+            	color: #000;
+            	background: #fff;
+            	padding: 10px 0 5px 0;
+            	margin-top: -10px;
+            }
+            
+            dl:nth-of-type(1) dt:before {
+            	content: "\f19c";
+            }
+            
+            dl:nth-of-type(2) dt:before {
+            	content: "\f1b0";
+            }
+            
+            dl:nth-of-type(3) dt:before {
+            	content: "\f0b1";
+            }
+            
+            dl:nth-of-type(4) dt:before {
+            	content: "\f013";
+            }
+            
+            dl:nth-of-type(1):before,
+            dl:nth-of-type(2):before,
+            dl:nth-of-type(3):before,
+            dl:nth-of-type(4):before
+            {
+            	background: #11abb0;
+            	content: '';
+            	margin-left: -1px;
+            	position: absolute;
+            	top: 0;
+            	left: 32px;
+            	width: 2px;
+            	height: 100%;
+            }
+            
+            dl:nth-of-type(1) dd,
+            dl:nth-of-type(2) dd,
+            dl:nth-of-type(3) dd,
+            dl:nth-of-type(4) dd,
+            {
+            	margin-bottom: 20px;
+            	margin-left: 55px;
+            }
+            
+            dl:last-of-type {
+            	font-size: 14px;
+            }
+            
+            dl:last-of-type dt {
+            	color: #ed5565;
+            	font-weight: bold;
+            }
+            </style>
+            </head>
+    <body>
+        <!-- INCLUDE-BEFORE -->
+        
+        <!-- TITLE -->
+                <div id="header">
+            <h1 class="title">Lin, Yu-han's Resume</h1>
+                                            </div>
+        
+        <!-- TOC -->
+                
+        <!-- HTML BODY-->
+        <div id="divbody">
+        <h1 id="guesslinlin-yu-han">Guesslin(Lin, Yu-han)</h1>
+        <ul>
+        <li>Programmer of Golang, Python, and C/C++</li>
+        <li>Interested in writing some stuff to change my life</li>
+        <li>Player of Monster Hunter: mhp2g, mhp3, mh4, mh4g, mhx</li>
+        <li>Player of Mini Quad-Copter</li>
+        </ul>
+        <h2 id="summary">Summary</h2>
+        <p>Working at <a href="https://www.icst.org.tw/">ICST</a>, specialized in system development and programming, usually using Python and GO programming language, has experience in developing automatic logging system and assist tools. Participate in Golang Taipei Community.</p>
+        <h1 id="experience">EXPERIENCE</h1>
+        <h2 id="institute-of-information-industry">INSTITUTE OF INFORMATION INDUSTRY</h2>
+        <h3 id="security-engineer-information-communication-security-technology-center">Security Engineer, Information &amp; Communication Security Technology Center</h3>
+        <p>Since October 2013 to current</p>
+        <ul>
+        <li>Introduce revision control into team development flow
+        <ul>
+        <li>Build up git work flow</li>
+        <li>Set up gitlab</li>
+        </ul></li>
+        <li>Develop security tools
+        <ul>
+        <li>Develop automatic logging parsing and recording system</li>
+        <li>Develop Linux IR tool to collect system informations</li>
+        <li>Develop batch query through Virus Total API</li>
+        <li>Custom source code of Cuckoobox</li>
+        </ul></li>
+        <li>Malware analysis
+        <ul>
+        <li>Write and deploy snort rule base on malware networking signature</li>
+        <li>Write and deploy YARA rule base on malware static pattern</li>
+        </ul></li>
+        <li>Incident response
+        <ul>
+        <li>Have experience on IR cases, good at forensic skill including:
+        <ul>
+        <li>System logs parser</li>
+        <li>Network packets analysis</li>
+        <li>Malware analysis</li>
+        <li>Forensic investigation</li>
+        </ul></li>
+        </ul></li>
+        </ul>
+        <h1 id="skill">SKILL</h1>
+        <h2 id="programming-language">Programming Language</h2>
+        <ul>
+        <li>Golang</li>
+        <li>Python</li>
+        <li>C</li>
+        <li>C++</li>
+        <li>SQL (mostly in MySQL and Postgres)</li>
+        <li>Shell script (automation)</li>
+        </ul>
+        <h2 id="revision-control">Revision Control</h2>
+        <ul>
+        <li>Git</li>
+        <li>SVN</li>
+        </ul>
+        <h2 id="linux-system-administration">Linux System Administration</h2>
+        <ul>
+        <li>GNU/Linux
+        <ul>
+        <li>Gentoo (Since Gentoo 2007.0)</li>
+        <li>Debian (Since Debian lenny)</li>
+        <li>Ubuntu (Since Ubuntu 10.04)</li>
+        </ul></li>
+        <li>Docker Server</li>
+        <li>DNS Server</li>
+        <li>Mail Server</li>
+        </ul>
+        <h2 id="security">Security</h2>
+        <ul>
+        <li>Incident Response</li>
+        <li>Malware Analysis</li>
+        <li>Network Flow Analysis</li>
+        <li>Reverse Engineering</li>
+        <li>System Log analysis</li>
+        <li>Static Analysis tool develop</li>
+        </ul>
+        <h2 id="network-management">Network Management</h2>
+        <ul>
+        <li>L3 Switch/Router, OSPF setting</li>
+        <li>Firewall, iptable</li>
+        <li>Netflow</li>
+        </ul>
+        <h2 id="arduino">Arduino</h2>
+        <ul>
+        <li>ArduPilot (ArduCopter, ArduPlane)</li>
+        </ul>
+        <h2 id="virtualization">Virtualization</h2>
+        <ul>
+        <li>XEN</li>
+        <li>Vagrant</li>
+        </ul>
+        <h1 id="projects">PROJECTS</h1>
+        <h2 id="golang">Golang</h2>
+        <ul>
+        <li><a href="https://github.com/guesslin/mits">mits</a> : Mutual Information Term Segmentation</li>
+        <li><a href="https://github.com/guesslin/mh4gquest">mh4gquest</a> : Monster Hunter 4G Quest random list generator</li>
+        <li><a href="https://github.com/guesslin/chartit">chartit</a> : Generate Chart from CSV file</li>
+        <li><a href="https://github.com/guesslin/have_fun">have_fun</a> <a href="http://refreshing-well-815.appspot.com/">2</a> : Find fun between us in google map</li>
+        <li><a href="https://github.com/guesslin/bf">BF interpreter</a> : bf language interpreter implement in golang</li>
+        </ul>
+        <h2 id="python">Python</h2>
+        <ul>
+        <li><a href="https://github.com/guesslin/wra">Taiwan reservoir storage auto-crawler</a> : Auto Crawler for Taiwan reservoir storage capacity</li>
+        <li><a href="https://github.com/guesslin/mock_note">Mock note</a> : Python Mocking module notes</li>
+        <li><a href="https://github.com/guesslin/cec">CEC Data set check</a> : Central election commission dataset checker</li>
+        <li><a href="https://github.com/MISNUK/CECDataSet">CEC DataSet</a> : Central election commission dataset from 1994 to 2016</li>
+        <li><a href="https://github.com/mushorg/glastopf">Glastopf</a> : Web Application Honeypot</li>
+        </ul>
+        <h2 id="cc">C/C++</h2>
+        <ul>
+        <li><a href="https://github.com/guesslin/formosa">Formosa-BBS</a> : Formosa BBS system</li>
+        </ul>
+        <h2 id="security-1">Security</h2>
+        <ul>
+        <li><a href="https://github.com/guesslin/IR_Tool">Linux IR_tools</a> : Script for Forensic on Linux</li>
+        <li><a href="https://github.com/guesslin/petools">PE Tools</a> : My own writing tools for PE files analysis</li>
+        </ul>
+        <h2 id="write-ups">Write-Ups</h2>
+        <ul>
+        <li><a href="https://github.com/guesslin/leetcode">leetcode</a></li>
+        <li>Over The Wire: <a href="https://github.com/guesslin/overthewire_bandit">Bandit</a></li>
+        </ul>
+        <h2 id="misc">Misc</h2>
+        <ul>
+        <li><a href="https://github.com/guesslin/talks">Talks</a> : My talks slides</li>
+        <li><a href="https://github.com/guesslin/package-tips">Package-tips</a> : Tips for writing GO package, and how to write test code in GO</li>
+        <li><a href="https://github.com/guesslin/dotfiles">dotfiles</a> : My dot-files configurations</li>
+        </ul>
+        <h1 id="education">EDUCATION</h1>
+        <ul>
+        <li>Master degree of information management, department of information management, 2013, National University of Kaohsiung, Kaohsiung. (08/2011 ~ 07/2013)</li>
+        <li>Bachelor of engineering, department of computer science and engineering, 2011, National Sun Yat-sen University, Kaohsiung. (08/2005 ~ 07/2011)</li>
+        </ul>
+        <h1 id="contact">CONTACT</h1>
+        <ul>
+        <li><strong>E-mail</strong>: <script type="text/javascript">
+        <!--
+        h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x67;&#x75;&#x65;&#x73;&#x73;&#108;&#x69;&#110;&#x31;&#x39;&#56;&#54;';e=n+a+h;
+        document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+        // -->
+        </script><noscript>&#x67;&#x75;&#x65;&#x73;&#x73;&#108;&#x69;&#110;&#x31;&#x39;&#56;&#54;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript></li>
+        <li><strong>Github</strong>: <a href="https://github.com/guesslin" class="uri">https://github.com/guesslin</a></li>
+        <li><strong>Homepage</strong>: <a href="https://guesslin.github.io" class="uri">https://guesslin.github.io</a></li>
+        <li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/yu-han-lin-2a87a49a" class="uri">https://www.linkedin.com/in/yu-han-lin-2a87a49a</a></li>
+        </ul>
+        <h1 id="languages">LANGUAGES</h1>
+        <ul>
+        <li>Chinese - Native</li>
+        <li>English - Conversational, Good (listening, reading)</li>
+        <li>Japanese - Basic in both reading and listening</li>
+        </ul>
+        <h1 id="conference">CONFERENCE</h1>
+        <h2 id="taiwan-academic-network-conference">Taiwan Academic Network Conference</h2>
+        <ul>
+        <li>A Case Study of APT Attack in Taiwan Academic Network(2014) Based on a real APT case in TANet, validating the attack mechanism of each stage in APT Killer Chain model. Analyze the hacker attack pattern in TANet and provide suggestions to defense APT attack in order to reduce the impact.</li>
+        </ul>
+        <h2 id="masters-thesis">Master's Thesis</h2>
+        <ul>
+        <li>A Study of Detecting Malicious Website Code Based on Text Mining Techniques(2013)
+        <ul>
+        <li>This research proposes a malicious website detecting mechanism based on mutual information text segmentation and text mining technique takes no manpower and wasted time on constructing website program parser and digging out feature of different attacking code for different vulnerabilities.</li>
+        </ul></li>
+        </ul>
+        </div>
+
+        <!-- INCLUDE-AFTER -->
+            </body>
 </html>
