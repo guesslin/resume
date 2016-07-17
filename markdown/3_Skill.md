@@ -11,30 +11,47 @@
 * Shell script (automation)
 
 
-## Linux System manangement
+## Revision Control
 
-* GNU/Linux(Gentoo, Debian, Ubuntu, Centos)
+* Git
+* SVN
+
+
+## Linux System Administration
+
+* GNU/Linux
+	* Gentoo (Since Gentoo 2007.0)
+	* Debian (Since Debian lenny)
+	* Ubuntu (Since Ubuntu 10.04)
+* Docker Server
 * DNS Server
-* Docker Server management
 * Mail Server
+* HTTP Server
 
 
 ## Security
 
 * Incident Response
 * Malware Analysis
-* Static Analysis tool develop
 * Network Flow Analysis
 * Reverse Engineering
 * System Log analysis
+* Static Analysis tool develop
 
 
 ## Network Management
 
-* L3 Switch/Router, OSPF
+* L3 Switch/Router, OSPF setting
 * Firewall, iptable
+* Netflow
 
 
 ## Arduino
 
-* ArduPilot(ArduCopter, ArduPlane)
+* ArduPilot (ArduCopter, ArduPlane)
+
+
+## Virtualization
+
+* Xen
+* Vagrant

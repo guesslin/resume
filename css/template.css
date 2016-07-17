@@ -21,7 +21,6 @@ div#TOC, nav#TOC
     border-bottom: 1px solid #aaa;
     margin-bottom: 0.5em;
     }
-
 @media print
     {
     div#TOC, nav#TOC
@@ -32,14 +31,21 @@ div#TOC, nav#TOC
     }
 
 /* ---- Headers and sections ---- */
+body
+{
+    background: #fff;
+    color: #222;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 20%;
+}
+
 
 h1, h2, h3, h4, h5, h6
 {
     font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Calibri, Arial, sans-serif; /* Sans-serif headers */
 
     /* font-family: "Liberation Serif", "Georgia", "Times New Roman", serif; /* Serif headers */
-
-    page-break-after: avoid; /* Firefox, Chrome, and Safari do not support the property value "avoid" */
 }
 
 /* Pandoc with --section-divs option */

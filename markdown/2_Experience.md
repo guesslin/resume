@@ -1,29 +1,25 @@
-# WORK EXPERIENCE
+# EXPERIENCE
 
+## INSTITUTE OF INFORMATION INDUSTRY
 
-## Institute for Information Industry
+### Security Engineer, Information & Communication Security Technology Center
 
-* __Engineer__ since October 2013 to current.
-	* introduce revision control flow into development flow
-	* develop automatic logging parsing and record system
-	* assist tools development and mantain
-		*
-	* malware analysis
-		* write and deploy snort rule base on malware networking signature
-		* write and deploy YARA rule base on malware static pattern
-	* incident response
+Since October 2013 to current
 
-	* 導入版本控制流程於組內系統
-	* 自動化紀錄系統開發
-	* 工具開發
-		* 配合分析流程
-	* 惡意程式分析
-		* 根據網路連線特徵撰寫 SNORT RULE
-		* 根據惡意程式字串特徵撰寫 YARA RULE
-	* 資安事故處理
-		* 於技服中心服務期間，擁有資安事故處理的經驗，事故處理中使用的技能包含：
-			現場採證
-			系統日誌檔分析
-			網路封包分析
-			惡意程式分析
-			資安事故報告撰寫
+* Introduce revision control into team development flow
+	* Build up git work flow
+	* Set up gitlab
+* Develop security tools
+	* Develop automatic logging parsing and recording system
+	* Develop Linux IR tool to collect system informations
+	* Develop batch query through Virus Total API
+	* Custom source code of Cuckoobox
+* Malware analysis
+	* Write and deploy snort rule base on malware networking signature
+	* Write and deploy YARA rule base on malware static pattern
+* Incident response
+	* Have experience on IR cases, good at forensic skill including:
+		* System logs parser
+		* Network packets analysis
+		* Malware analysis
+		* Forensic investigation
