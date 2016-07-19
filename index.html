@@ -15,34 +15,9 @@
         
         
                     <style type="text/css">
-            @font-face {
-              font-family: 'FontAwesome';
-              src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0');
-              src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
-              font-weight: normal;
-              font-style: normal;
+            
+            @media screen {
             }
-            
-            
-            
-            
-            /* Printing styles */
-            
-            @media print {
-            
-            	h2:last-of-type,  h2:nth-of-type(5),h2:nth-of-type(6) {
-            		page-break-before: always;
-            	}
-            
-            	dt, dd, hr {
-            		page-break-inside: avoid;
-            	}
-            
-            }
-            
-            
-            /* General */
-            
             
             body {
             	margin-bottom: 20%;
@@ -56,229 +31,30 @@
             	position: relative;
             }
             
-            code {
-            	font-size: 13px;
-            }
-            
             h1 {
             	font-size: 38px;
             	text-transform: uppercase;
+            	border-bottom: 3px solid #11ABB0;
             }
             
             h2 {
-            	font: "Open Sans", sans-serif;
-            	font-size: 1.3em;
+            	font: sans-serif;
+            	font-size: 20px;
             	text-transform: uppercase;
-            	border-bottom: 3px solid #11ABB0;
-            	padding-bottom: 4px;
-            	margin-top: 5px;
             }
             
-            h3 {
-            	font: "Open Sans", sans-serif;
-            	font-size: 1.3em;
-            	border-bottom: 1px solid #FFFFDF;
-            	padding-bottom: 4px;
-            }
-            
-            hr {
-              background: #ddd;
-              clear: both;
-              float: none;
-              width: 100%;
-              height: 1px;
-              margin: 0 0 2.0em;
-              border: none;
-            }
-            
-            hr:nth-of-type(1) {
-            	margin-top: -10px;
+            li {
+            	margin-top: 3px;
             }
             
             a, a:visited {
             	text-decoration: none;
             }
             
-            a:hover {
-            	text-decoration: underline;
-            }
-            
-            .caption {
-            	display: none;
-            }
-            
-            ul {
-            	padding-left: 25px;
-            }
-            
             p {
-            	margin: 15px 0;
+            	margin: 14px 0;
             }
             
-            
-            
-            /* Header list with personal info */
-            
-            h2:nth-of-type(1) {
-            	margin-top: 5px;
-            	font-style: italic;
-            	border: none;
-            	margin-bottom: 0;
-            	padding-bottom: 0;
-            }
-            
-            h2:nth-of-type(2) {
-            	margin-top: -20px;
-            }
-            
-            .figure:nth-of-type(1) img {
-            	position: absolute;
-            	top: 25px;
-            	right: 5px;
-            	border: 5px solid #C7A0A4;
-            	border-radius: 100%;
-            }
-            
-            
-            body > ul:nth-of-type(1) li {
-            	list-style: none;
-            	padding-bottom: 5px;
-            }
-            
-            body > ul:nth-of-type(1) li:before {
-              display: inline-block;
-              font: normal normal normal 14px/1 FontAwesome;
-              font-size: inherit;
-              text-rendering: auto;
-              margin-right: 20px;
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-              transform: translate(0, 0);
-            }
-            
-            /* GitHub */
-            body > ul:nth-of-type(1) li:nth-of-type(1):before {
-              content: "\f09b";
-            }
-            
-            /* Mail */
-            body > ul:nth-of-type(1) li:nth-of-type(2):before {
-              content: "\f0e0";
-            }
-            
-            /* Birthday */
-            body > ul:nth-of-type(1) li:nth-of-type(3):before {
-              content: "\f1fd";
-            }
-            
-            /* Address */
-            body > ul:nth-of-type(1) li:nth-of-type(4):before {
-              content: "\f015";
-            }
-            
-            /* Phone */
-            body > ul:nth-of-type(1) li:nth-of-type(5):before {
-              content: "\f095";
-            }
-            
-            
-            
-            
-            
-            /* Education timeline */
-            
-            dl:nth-of-type(1),
-            dl:nth-of-type(2),
-            dl:nth-of-type(3),
-            dl:nth-of-type(4)
-            {
-            	position: relative;
-            }
-            
-            dl:nth-of-type(1) dt,
-            dl:nth-of-type(2) dt,
-            dl:nth-of-type(3) dt,
-            dl:nth-of-type(4) dt
-            {
-            	background: none repeat scroll 0 0 #ed5565;
-            	box-shadow: 0 0 0 0 #11abb0 inset;
-            	color: #fff;
-            	display: inline-block;
-            	font-size: 14px;
-            	font-weight: bold;
-            	margin-left: 55px;
-            	padding: 8px 15px;
-            }
-            
-            dl:nth-of-type(1) dt:before,
-            dl:nth-of-type(2) dt:before,
-            dl:nth-of-type(3) dt:before,
-            dl:nth-of-type(4) dt:before
-            {
-            	display: inline-block;
-            	font: normal normal normal 14px/1 FontAwesome;
-            	font-size: inherit;
-            	text-rendering: auto;
-            	-webkit-font-smoothing: antialiased;
-            	-moz-osx-font-smoothing: grayscale;
-            	transform: translate(0, 0);
-            	content: "\f19c";
-            	position: absolute;
-            	left: 25px;
-            	color: #000;
-            	background: #fff;
-            	padding: 10px 0 5px 0;
-            	margin-top: -10px;
-            }
-            
-            dl:nth-of-type(1) dt:before {
-            	content: "\f19c";
-            }
-            
-            dl:nth-of-type(2) dt:before {
-            	content: "\f1b0";
-            }
-            
-            dl:nth-of-type(3) dt:before {
-            	content: "\f0b1";
-            }
-            
-            dl:nth-of-type(4) dt:before {
-            	content: "\f013";
-            }
-            
-            dl:nth-of-type(1):before,
-            dl:nth-of-type(2):before,
-            dl:nth-of-type(3):before,
-            dl:nth-of-type(4):before
-            {
-            	background: #11abb0;
-            	content: '';
-            	margin-left: -1px;
-            	position: absolute;
-            	top: 0;
-            	left: 32px;
-            	width: 2px;
-            	height: 100%;
-            }
-            
-            dl:nth-of-type(1) dd,
-            dl:nth-of-type(2) dd,
-            dl:nth-of-type(3) dd,
-            dl:nth-of-type(4) dd,
-            {
-            	margin-bottom: 20px;
-            	margin-left: 55px;
-            }
-            
-            dl:last-of-type {
-            	font-size: 14px;
-            }
-            
-            dl:last-of-type dt {
-            	color: #ed5565;
-            	font-weight: bold;
-            }
             </style>
             </head>
     <body>
@@ -287,14 +63,14 @@
         <!-- TITLE -->
                 <div id="header">
             <h1 class="title">Lin, Yu-han's Resume</h1>
-                                            <ul class="contact">
-            <li><strong>E-mail</strong>: guesslin1986@gmail.com</li>
-            <li><strong>Github</strong>: <a href="https://github.com/guesslin" class="uri">https://github.com/guesslin</a></li>
-            <li><strong>Homepage</strong>: <a href="https://guesslin.github.io" class="uri">https://guesslin.github.io</a></li>
-            <li><strong>Linkedin</strong>: <a href="www.linkedin.com/in/yu-han-lin-2a87a49a" class="uri">www.linkedin.com/in/yu-han-lin-2a87a49a</a></li>
-            <li><strong>Phone</strong>: <a href="+886-931-271-926" class="uri">+886-931-271-926</a></li>
-            <li><strong>Addr</strong>: 4F., No.28, Aly. 49, Ln. 119, Donghu Rd., Neihu Dist., Taipei City 114, Taiwan (R.O.C.)</li>
-        </ul>
+                                                <ul class="contact">
+                <li><strong>E-mail</strong>: guesslin1986@gmail.com</li>
+                <li><strong>Github</strong>: <a href="https://github.com/guesslin" class="uri">https://github.com/guesslin</a></li>
+                <li><strong>Homepage</strong>: <a href="https://guesslin.github.io" class="uri">https://guesslin.github.io</a></li>
+                <li><strong>Linkedin</strong>: <a href="www.linkedin.com/in/yu-han-lin-2a87a49a" class="uri">www.linkedin.com/in/yu-han-lin-2a87a49a</a></li>
+                <li><strong>Phone</strong>: +886-931-271-926</li>
+                <li><strong>Addr</strong>: 4F., No.28, Aly. 49, Ln. 119, Donghu Rd., Neihu Dist., Taipei City 114, Taiwan (R.O.C.)</li>
+            </ul>
                                 </div>
         
         <!-- TOC -->
