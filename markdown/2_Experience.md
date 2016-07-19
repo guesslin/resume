@@ -12,8 +12,9 @@ Since October 2013 to current
 * Develop security tools
 	* Develop automatic logging parsing and recording system
 	* Develop Linux IR tool to collect system informations
-	* Develop batch query through Virus Total API
-	* Custom source code of Cuckoobox
+	* Develop Windows PE tools to get malicious program informations
+	* Develop batch query tool through Virus Total API
+	* Customize source code of Cuckoobox
 * Malware analysis
 	* Write and deploy snort rule base on malware networking signature
 	* Write and deploy YARA rule base on malware static pattern

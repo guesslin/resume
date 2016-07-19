@@ -1,0 +1,42 @@
+<style type="text/css">
+
+@media screen {
+}
+
+body {
+	margin-bottom: 20%;
+	margin-left: 20%;
+	width: 60%;
+	margin: 0 auto;
+	background-color: #fff;
+	font-family: Georgia;
+	font-size: 15px;
+	color: #444;
+	position: relative;
+}
+
+h1 {
+	font-size: 38px;
+	text-transform: uppercase;
+	border-bottom: 3px solid #11ABB0;
+}
+
+h2 {
+	font: sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+li {
+	margin-top: 3px;
+}
+
+a, a:visited {
+	text-decoration: none;
+}
+
+p {
+	margin: 14px 0;
+}
+
+</style>

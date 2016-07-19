@@ -57,6 +57,16 @@
             $for(author)$
             <h2 class="author">$author$</h2>
             $endfor$
+            $if(contact)$
+            <ul class="contact">
+                <li><strong>E-mail</strong>: $contact.email$</li>
+                <li><strong>Github</strong>: <a href="$contact.github$" class="uri">$contact.github$</a></li>
+                <li><strong>Homepage</strong>: <a href="$contact.homepage$" class="uri">$contact.homepage$</a></li>
+                <li><strong>Linkedin</strong>: <a href="$contact.linkedin$" class="uri">$contact.linkedin$</a></li>
+                <li><strong>Phone</strong>: $contact.phone$</li>
+                <li><strong>Addr</strong>: $contact.addr$</li>
+            </ul>
+            $endif$
             $if(date)$
             <h3 class="date">$date$</h3>
             $endif$

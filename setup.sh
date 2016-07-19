@@ -4,7 +4,7 @@ mkd_dir="markdown"
 css_dir="css"
 tmpfile="tmp.md"
 metafile="metadata.yaml"
-cssfile="t2.css"
+cssfile="default.css"
 
 function basicSetup() {
 srcs=`ls -1 $mkd_dir`
