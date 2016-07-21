@@ -6,7 +6,7 @@
 * [mits][] : Mutual Information Term Segmentation
 * [mh4gquest][] : Monster Hunter 4G Quest random list generator
 * [chartit][] : Generate Chart from CSV file
-* [have_fun][hf1] [2][hf2] : Find fun between us in google map
+* [have_fun][hf1] : Find fun between us in google map, [Link][hf2]
 * [BF interpreter][bf] : bf language interpreter implement in golang
 
 [mits]: https://github.com/guesslin/mits
@@ -51,7 +51,7 @@
 ## Write-Ups
 
 * [leetcode][]
-* Over The Wire: [Bandit][]
+* Over The Wire : [Bandit][]
 
 [leetcode]: https://github.com/guesslin/leetcode
 [Bandit]: https://github.com/guesslin/overthewire_bandit
