@@ -8,6 +8,7 @@
 * [chartit][] : Generate Chart from CSV file
 * [have_fun][hf1] : Find fun between us in google map, [Link][hf2]
 * [BF interpreter][bf] : bf language interpreter implement in golang
+* [snake][] : Simple linux console snake game write in golang
 
 [mits]: https://github.com/guesslin/mits
 [mh4gquest]: https://github.com/guesslin/mh4gquest
@@ -15,6 +16,7 @@
 [hf1]: https://github.com/guesslin/have_fun
 [hf2]: http://refreshing-well-815.appspot.com/
 [bf]: https://github.com/guesslin/bf
+[snake]: https://github.com/guesslin/snake
 
 
 ## Python
