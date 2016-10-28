@@ -64,7 +64,9 @@
                 <li><strong>Homepage</strong>: <a href="$contact.homepage$" class="uri">$contact.homepage$</a></li>
                 <li><strong>Linkedin</strong>: <a href="$contact.linkedin$" class="uri">$contact.linkedin$</a></li>
                 <li><strong>Phone</strong>: $contact.phone$</li>
+                $if(contact.addr)$
                 <li><strong>Addr</strong>: $contact.addr$</li>
+                $endif$
             </ul>
             $endif$
             $if(date)$
