@@ -2,12 +2,12 @@
 
 * Programmer of Golang, Python, and C/C++
 * Interested in writing some stuff to change my life
-* Experienced in Python/Go/C/C++
+* Experienced in Go/C/Python/TypeScript
 * Player of Mini Quad-Copter
 
 
 ## Summary
 
-Working at [ICST][], specialized in system development and programming, usually using __Python__ and __Golang__ programming language, has experience in developing automatic logging system within __Python Django__ and develop Linux IR tools. Interested in writing some stuff to change my life. Participate in Golang Taipei Community.
+Working at [Glasnostic][] (2016.11 ~ now), specialized in system development and programming, usually using __Golang__ programming language, has experience in network software and micro-services architecture developing in __Golang__. Interested in writing some stuff to make my life different.
 
-[ICST]: https://www.icst.org.tw/
+[Glasnostic]: https://glasnostic.com/

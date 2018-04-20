@@ -8,6 +8,7 @@
 * C
 * C++
 * SQL (mostly in MySQL and Postgres)
+* TypeScript
 * Shell script (automation)
 
 

@@ -1,26 +1,32 @@
 # EXPERIENCE
 
+## GLASOSTIC
+
+### Software Engineer, Glasnostic Inc.
+
+Since November 2016 to current
+
+* Writing MSA Router in GO
+	* Develop MAS Router to monitor traffic in MSA
+* Micro-Service in GO
+	* Develop API-Gateway
+	* OAuth2 authentication
+	* NOSQL database
+	* 
+* Kernel driver development
+	* Patch hyper-v netvsc driver module
+* Front End develop in TypeScript
+* Network traffic Simulator in NodeJS
+* Microsoft Azure ACS/ACR/AKS
+* Amazon AWS EC2
+
 ## INSTITUTE OF INFORMATION INDUSTRY
 
 ### Security Engineer, Information & Communication Security Technology Center
 
-Since October 2013 to current
+Since October 2013 to November 2016
 
-* Introduce revision control into team development flow
-	* Build up git work flow
-	* Set up gitlab
-* Develop security tools
-	* Develop automatic logging parsing and recording system
-	* Develop Linux IR tool to collect system informations
-	* Develop Windows PE tools to get malicious program informations
-	* Develop batch query tool through Virus Total API
-	* Customize source code of Cuckoobox
-* Malware analysis
-	* Write and deploy snort rule base on malware networking signature
-	* Write and deploy YARA rule base on malware static pattern
-* Incident response
-	* Have experience on IR cases, good at forensic skill including:
-		* System logs parser
-		* Network packets analysis
-		* Malware analysis
-		* Forensic investigation
+* Introduce revision control into team development flow, introduce git work flow
+* Develop security tools, including automatic log parsing, Linux IR-tools, Windows PE tools, Virus Total API query, CuckooBox customized
+* Malware analysis, deploy snort and YARA rule base on malware signature
+* Incident response, experience on IR cases, forensic investigation
