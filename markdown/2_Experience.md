@@ -2,6 +2,8 @@
 
 ## GLASOSTIC
 
+### Router Team Leader, since 11/13 2018, Glasnostic Inc.
+
 ### Software Engineer, Glasnostic Inc.
 
 Since November 2016 to current
@@ -12,11 +14,12 @@ Since November 2016 to current
 	* Develop API-Gateway
 	* OAuth2 authentication
 	* NOSQL database
-	* 
 * Kernel driver development
 	* Patch hyper-v netvsc driver module
+	* Introduce new nff-go device bind
 * Front End develop in TypeScript
 * Network traffic Simulator in NodeJS
+	* Implement real traffic generator in same model
 * Microsoft Azure ACS/ACR/AKS
 * Amazon AWS EC2
 
