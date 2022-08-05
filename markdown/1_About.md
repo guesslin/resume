@@ -8,6 +8,6 @@
 
 ## Summary
 
-Working at [Glasnostic][] (2016.11 ~ now), specialized in system development and programming, usually using __Golang__ programming language, has experience in network software and micro-services architecture developing in __Golang__. Interested in writing some stuff to make my life different.
+Working at [Glasnostic][] (2016.11 ~ 2022.07), specialized in system development and programming, usually using __Golang__ programming language, have experience in network software and micro-services architecture developing in __Golang__. Have experience in EKS/AKS/GKS/OCP multiple kubernetes platform. Interested in writing some stuff to make my life different.
 
 [Glasnostic]: https://glasnostic.com/

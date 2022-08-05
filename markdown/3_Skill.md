@@ -51,8 +51,8 @@
 
 * ArduPilot (ArduCopter, ArduPlane)
 
+## Cloud Platform
 
-## Virtualization
-
-* Xen
-* Vagrant
+* Azure
+* Google Cloud Platform
+* Amazon AWS EC2

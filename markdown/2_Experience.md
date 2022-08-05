@@ -2,11 +2,35 @@
 
 ## GLASOSTIC
 
-### Router Team Leader, since 11/13 2018, Glasnostic Inc.
+### Head of Engineer, since 2021/09, Glasnostic Inc.
 
-### Software Engineer, Glasnostic Inc.
+#### Product develop
 
-Since November 2016 to current
+* Implement new traffic matching strategy into Products.
+* Implement sending Webhook in Envoy-WASM.
+* Introduce AFXDP into Router as an user-space network packet collector.
+* Support Azure Gateway Load Balancer.
+
+#### Cloud Backend develop
+
+* Introduce Azure B2C SSO.
+* Migrate Cloud infrastructure to Google Cloud Platform.
+
+### Router Team Leader, since 2018/11, Glasnostic Inc.
+
+* Implement DPI filter into Router for security checking.
+* Implement multiple network interfaces for I/O.
+* Introduce eBPF into Router as an user-space network packet collector.
+* Introduce NFF-GO into Router as an user-space network packet collector.
+* Support Openshift Container Platform.
+* Support Antrea with OpenvSwitch.
+* Support AWS GWLB.
+* Tweak Router life-cycle for different deployments.
+
+
+### Software Engineer, since 2016/11, Glasnostic Inc.
+
+As Glasnostic is a small start-up, we had lots of cross-team support. So I had learned lots for different technical.
 
 * Writing MSA Router in GO
 	* Develop MAS Router to monitor traffic in MSA
