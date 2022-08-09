@@ -1,6 +1,6 @@
 # EXPERIENCE
 
-## GLASOSTIC
+## GLASNOSTIC
 
 ### Head of Engineer, since 2021/09, Glasnostic Inc.
 
