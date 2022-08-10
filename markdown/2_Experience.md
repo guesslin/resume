@@ -6,8 +6,8 @@
 
 #### Product develop
 
-* Implement new traffic matching strategy into Products.
-* Implement sending Webhook in Envoy-WASM.
+* Built new traffic matching strategy into Products.
+* Built sending Webhook in Envoy-WASM.
 * Introduce AFXDP into Router as an user-space network packet collector.
 * Support Azure Gateway Load Balancer.
 
@@ -18,14 +18,15 @@
 
 ### Router Team Leader, since 2018/11, Glasnostic Inc.
 
-* Implement DPI filter into Router for security checking.
-* Implement multiple network interfaces for I/O.
+* Built DPI filter into Router for security checking.
+* Built multiple network interfaces for I/O.
 * Introduce eBPF into Router as an user-space network packet collector.
 * Introduce NFF-GO into Router as an user-space network packet collector.
 * Support Openshift Container Platform.
 * Support Antrea with OpenvSwitch.
 * Support AWS GWLB.
 * Tweak Router life-cycle for different deployments.
+* Deploy cross-region EKS cluster over Wavelength with MQTT demo.
 
 
 ### Software Engineer, since 2016/11, Glasnostic Inc.
@@ -43,7 +44,7 @@ As Glasnostic is a small start-up, we had lots of cross-team support. So I had l
 	* Introduce new nff-go device bind
 * Front End develop in TypeScript
 * Network traffic Simulator in NodeJS
-	* Implement real traffic generator in same model
+	* Built real traffic generator in same model
 * Microsoft Azure ACS/ACR/AKS
 * Amazon AWS EC2
 
