@@ -4,30 +4,22 @@
 ## Programming Language
 
 * Golang
+* Shell script
+* C/C++
 * Python
-* C
-* C++
-* SQL (mostly in MySQL and Postgres)
-* TypeScript
-* Shell script (automation)
+* TypeScript (Node.js)
 
 
 ## Revision Control
 
 * Git
-* SVN
 
 
 ## Linux System Administration
 
-* GNU/Linux
-	* Gentoo (Since Gentoo 2007.0)
-	* Debian (Since Debian lenny)
-	* Ubuntu (Since Ubuntu 10.04)
-* Docker Server
-* DNS Server
-* Mail Server
-* HTTP Server
+* GNU/Linux (Ubuntiu/Debian/Gentoo/CentOS)
+* Docker
+* DNS/Mail/HTTP
 
 
 ## Security
@@ -42,17 +34,16 @@
 
 ## Network Management
 
-* L3 Switch/Router, OSPF setting
-* Firewall, iptable
-* Netflow
+* Kubernetes (AKS/EKS/GKE/OCP)
+* OpenvSwitch
+* Istio/Envoy with WASM
+* L3 Switch/Router, OSPF/BGP
+* Firewall, iptables
+* NetFlow
 
-
-## Arduino
-
-* ArduPilot (ArduCopter, ArduPlane)
 
 ## Cloud Platform
 
 * Azure
-* Google Cloud Platform
 * Amazon AWS EC2
+* Google Cloud Platform
