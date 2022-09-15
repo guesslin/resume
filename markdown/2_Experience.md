@@ -60,7 +60,7 @@ As Glasnostic is a small start-up during 2016, I had learned and experienced in 
 * Deploy testing Kubernetes clusters with Kube-admin on bare metal servers.
 
 
-## INSTITUTE OF INFORMATION INDUSTRY (2013.10 ~ 2026.11)
+## INSTITUTE OF INFORMATION INDUSTRY (2013.10 ~ 2016.11)
 
 ### Security Engineer, Information & Communication Security Technology Center
 
